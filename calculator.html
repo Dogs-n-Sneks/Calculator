@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            //this is Javascript code
+            var numberOne = 0;
+            var numberTwo = 0;
+
+            function setNumbers(){
+            numberOne = parseInt(document.getElementById("numberOne").value);
+            numberTwo = parseInt(document.getElementById("numberTwo").value);
+            }
+
+            function add(){
+                setNumbers();
+                var answer = numberOne + numberTwo;
+                document.getElementById("answer").innerHTML = answer;
+            }
+
+            function subtract(){
+                setNumbers();
+                var answer = numberOne - numberTwo;
+                document.getElementById("answer").innerHTML = answer;
+            }
+
+            function multiply(){
+                setNumbers();
+                var answer = numberOne * numberTwo;
+                document.getElementById("answer").innerHTML = answer;
+            }
+
+            function divide(){
+                setNumbers();
+                var answer = numberOne / numberTwo;
+                document.getElementById("answer").innerHTML = answer;
+            }
+        </script>   
+        <link href = "calculator.css" rel = "stylesheet">
+    </head>
+    <body>
+        <h1>Calculator</h1>
+        <p id = "answer">0</p>
+        <div>
+            <input type = "number" id = "numberOne" name = "inputNumber">
+            <input type = "number" id = "numberTwo" name = "inputNumber">
+        </div>
+        <br>
+        <div>
+          <button onclick = "add()">Add</button>
+          <button onclick = "subtract()">Subtract</button>
+          <button onclick = "multiply()">Multiply</button>
+          <button onclick = "divide()">Divide</button>
+    </body>
+
+</html>
